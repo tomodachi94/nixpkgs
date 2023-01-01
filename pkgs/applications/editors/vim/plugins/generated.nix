@@ -12238,12 +12238,12 @@ final: prev:
 
   vim-slime = buildVimPluginFrom2Nix {
     pname = "vim-slime";
-    version = "2022-10-29";
+    version = "2023-01-01";
     src = fetchFromGitHub {
       owner = "jpalardy";
       repo = "vim-slime";
-      rev = "55e8604bda53f11cbce5d2b976bacb157de70297";
-      sha256 = "19r7hx4xkw3b8fc81gp1sqc4xk3w2i55mpcbsrjr1mjyjwydjb84";
+      rev = "c9eaebd1068443b4d92c952788e4c75d337c1125";
+      sha256 = "0d8l1l8hmc6n78n8j20fwc7171615rbi139j1z2l7821f6dbggzk";
     };
     meta.homepage = "https://github.com/jpalardy/vim-slime/";
   };
@@ -12755,12 +12755,12 @@ final: prev:
 
   vim-tpipeline = buildVimPluginFrom2Nix {
     pname = "vim-tpipeline";
-    version = "2022-12-22";
+    version = "2023-01-01";
     src = fetchFromGitHub {
       owner = "vimpostor";
       repo = "vim-tpipeline";
-      rev = "b4aefd5a1e697ea68d50df2f7b222036a7251df8";
-      sha256 = "147mv6zn5b8my8a8w7ddk1g1wzj0xsdssb265j19vs8ajijg7bcy";
+      rev = "86f37afec5cefd75baaebf8900889dabb9789a2c";
+      sha256 = "133vfipflvalyp373lmqza5p8dhh2qnnvlh5y2bsxh5abjk1jml1";
     };
     meta.homepage = "https://github.com/vimpostor/vim-tpipeline/";
   };
