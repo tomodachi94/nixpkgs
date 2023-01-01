@@ -4641,6 +4641,18 @@ final: prev:
     meta.homepage = "https://github.com/chentoast/marks.nvim/";
   };
 
+  mason-null-ls-nvim = buildVimPluginFrom2Nix {
+    pname = "mason-null-ls.nvim";
+    version = "2022-12-22";
+    src = fetchFromGitHub {
+      owner = "jay-babu";
+      repo = "mason-null-ls.nvim";
+      rev = "4480bc59b72866376fc2f83048a932fa598d89a8";
+      sha256 = "1m7ygm2dd565qdvp5ffh7saf11mcc9dxi228kw4bcb74bhdan1p2";
+    };
+    meta.homepage = "https://github.com/jay-babu/mason-null-ls.nvim/";
+  };
+
   matchit-zip = buildVimPluginFrom2Nix {
     pname = "matchit.zip";
     version = "2010-10-18";
