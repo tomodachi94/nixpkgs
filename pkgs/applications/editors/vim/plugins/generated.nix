@@ -2297,6 +2297,18 @@ final: prev:
     meta.homepage = "https://github.com/glepnir/dashboard-nvim/";
   };
 
+  ddx-vim = buildVimPluginFrom2Nix {
+    pname = "ddx.vim";
+    version = "2023-01-21";
+    src = fetchFromGitHub {
+      owner = "Shougo";
+      repo = "ddx.vim";
+      rev = "f964873f154d4dc27da5e7a0795ac3ae4b68e6a7";
+      sha256 = "1xkp8a7h8chhna42a1drsimdzdhi24hs9493b7p5z8mpwdppw4h8";
+    };
+    meta.homepage = "https://github.com/Shougo/ddx.vim/";
+  };
+
   defx-git = buildVimPluginFrom2Nix {
     pname = "defx-git";
     version = "2021-01-01";
@@ -13925,8 +13937,8 @@ final: prev:
     src = fetchFromGitHub {
       owner = "glepnir";
       repo = "lspsaga.nvim";
-      rev = "38991c610ef4a009fcc4d94d3e66bf10f6177122";
-      sha256 = "0zaznla7pbkcvznv3pdqbrx2q1jl6p4v8zdky7a5d24rr4pzilxd";
+      rev = "3e67bc6a8aa4c3482b92e181a6b6fc0bbf0c1547";
+      sha256 = "0snw1yvfdghayiwd98i8ma729lsywm3r0k2kchr956zpnwsmjcrj";
     };
     meta.homepage = "https://github.com/glepnir/lspsaga.nvim/";
   };
