@@ -6119,12 +6119,12 @@ final: prev:
 
   nvim-lspconfig = buildVimPluginFrom2Nix {
     pname = "nvim-lspconfig";
-    version = "2023-01-21";
+    version = "2023-01-22";
     src = fetchFromGitHub {
       owner = "neovim";
       repo = "nvim-lspconfig";
-      rev = "0eecf453d33248e9d571ad26559f35175c37502d";
-      sha256 = "0ninvnv7y69sns08blmiw4khhcg2yjwlri4xj492qx1rfygy9xsl";
+      rev = "85cd2ecacd8805614efe3fb3a5146ac7d0f88a17";
+      sha256 = "0fhfqf4rag58q64wfrlfzyw87n3zv24gnwr9inn3i63b27r57w83";
     };
     meta.homepage = "https://github.com/neovim/nvim-lspconfig/";
   };
@@ -9487,12 +9487,12 @@ final: prev:
 
   vim-clap = buildVimPluginFrom2Nix {
     pname = "vim-clap";
-    version = "2023-01-21";
+    version = "2023-01-22";
     src = fetchFromGitHub {
       owner = "liuchengxu";
       repo = "vim-clap";
-      rev = "b4977d00fddd19c89a0ddd14a9ea5d7d0da4be08";
-      sha256 = "0cjb5n9p82bfwl016mpnvnf40hc49hsvxhywz4zn2ayy68w6y644";
+      rev = "5a6ff035e16c57874fbf68951b1206535733827d";
+      sha256 = "1v0fxyqnbcf3x5vv5aq1z9q75m1qym6l1f9jn9iwdwg06mj581wj";
     };
     meta.homepage = "https://github.com/liuchengxu/vim-clap/";
   };
@@ -13925,8 +13925,8 @@ final: prev:
     src = fetchFromGitHub {
       owner = "glepnir";
       repo = "lspsaga.nvim";
-      rev = "de44f2b213dfcae41d387c67d7befde708cf48c4";
-      sha256 = "00gllkm89iqqddbjyy5k509m240phb29zaqlj15v2cs60jd1nd0a";
+      rev = "38991c610ef4a009fcc4d94d3e66bf10f6177122";
+      sha256 = "0zaznla7pbkcvznv3pdqbrx2q1jl6p4v8zdky7a5d24rr4pzilxd";
     };
     meta.homepage = "https://github.com/glepnir/lspsaga.nvim/";
   };
