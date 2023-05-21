@@ -5,7 +5,7 @@
 
 let
   pname = "pakcs";
-  version = "2.2.1";
+  version = "2.5.2";
 
   # Don't switch to "Current release" without a reason, because its
   # source updates without version bump. Prefer last from "Older releases" instead.
