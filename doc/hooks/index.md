@@ -21,6 +21,7 @@ meson.section.md
 mpi-check-hook.section.md
 ninja.section.md
 patch-rc-path-hooks.section.md
+paxctl.section.md
 perl.section.md
 pkg-config.section.md
 postgresql-test-hook.section.md
