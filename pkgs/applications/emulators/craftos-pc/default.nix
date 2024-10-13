@@ -70,6 +70,7 @@ stdenv.mkDerivation rec {
     cp ./craftos2-lua/src/liblua.so $out/lib
     patchelf --replace-needed craftos2-lua/src/liblua.so liblua.so $out/bin/craftos
     cp -R api $dev/include/CraftOS-PC
+    cp craftos2-lua/include/* $dev/include/CraftOS-PC
     cp -R ${craftos2-rom}/* $out/share/craftos
 
     mkdir -p resources/linux-icons
