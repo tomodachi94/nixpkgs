@@ -62,10 +62,13 @@ in
 
     localuser = lib.mkOption {
       type = lib.types.nullOr lib.types.str;
-      default = "nobody";
+      default = null;
       description = ''
         The user to search non-network directories as, using
         {command}`su`.
+
+        If set to `null`, a dynamic user is created when
+        the service starts.
       '';
     };
 
@@ -290,6 +293,7 @@ in
         # NOTE: If /var/cache does not exist, this leads to the misleading error message:
         # update-locatedb.service: Failed at step NAMESPACE spawning …/update-locatedb-start: No such file or directory
         ReadWritePaths = dirOf cfg.output;
+        DynamicUser = lib.mkIf (cfg.localuser == null) true;
       };
     };
 
