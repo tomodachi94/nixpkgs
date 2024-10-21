@@ -61,5 +61,7 @@ buildPythonPackage rec {
       symphorien
       tomodachi94
     ];
+    # Tests use too many resources on the Darwin builder (Killed: 9)
+    hydraPlatforms = platforms.linux;
   };
 }
