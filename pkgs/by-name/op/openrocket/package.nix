@@ -29,19 +29,9 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     stripJavaArchivesHook
   ];
 
-  buildPhase = ''
-    runHook preBuild
-    ant
-    runHook postBuild
-  '';
-
   doCheck = true;
 
-  checkPhase = ''
-    runHook preCheck
-    ant unittest
-    runHook postCheck
-  '';
+  antCheckFlags = [ "unittest" ];
 
   installPhase = ''
     runHook preInstall
