@@ -25,11 +25,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     unzip
   ];
 
-  buildPhase = ''
-    runHook preBuild
-    ant -f webapp
-    runHook postBuild
-  '';
+  antFlags = [ "-f webapp" ];
 
   installPhase = ''
     runHook preInstall

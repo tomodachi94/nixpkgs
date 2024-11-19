@@ -17,9 +17,6 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ ant jdk makeWrapper ];
-  buildPhase = ''
-    ant
-  '';
 
   installPhase = ''
     mkdir $out

@@ -25,11 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     stripJavaArchivesHook
   ];
 
-  buildPhase = ''
-    runHook preBuild
-    ant jar
-    runHook postBuild
-  '';
+  antBuildFlags = [ "jar" ];
 
   installPhase = ''
     runHook preInstall

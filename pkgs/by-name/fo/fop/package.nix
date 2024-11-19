@@ -36,14 +36,10 @@ stdenv.mkDerivation (finalAttrs: {
   # Note: not sure if this is needed anymore
   env.JAVA_TOOL_OPTIONS = "-Dfile.encoding=UTF8";
 
-  buildPhase = ''
-    runHook preBuild
+  antFlags = [ "-f fop/build.xml" ];
 
-    # build only the "package" target, which generates the fop command.
-    ant -f fop/build.xml package
-
-    runHook postBuild
-  '';
+  # build only the "package" target, which generates the fop command.
+  antBuildFlags = [ "package" ];
 
   installPhase = ''
     runHook preInstall

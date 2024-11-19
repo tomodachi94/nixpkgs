@@ -34,12 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.JAVA_TOOL_OPTIONS = "-Dfile.encoding=UTF8"; # needed for jdk versions below jdk19
 
-  buildPhase = ''
-    runHook preBuild
-    ant
-    runHook postBuild
-  '';
-
   installPhase = ''
     runHook preInstall
     install -Dm644 pattypan.jar -t $out/share/pattypan
