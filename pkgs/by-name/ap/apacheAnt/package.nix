@@ -16,6 +16,8 @@ stdenv.mkDerivation rec {
     sha256 = "1l8say86bz9gxp4yy777z7nm4j6m905pg342li1aphc14p5grvwn";
   };
 
+  setupHook = ./setup-hook.sh;
+
   installPhase =
     ''
       mkdir -p $out/bin $out/lib/ant
