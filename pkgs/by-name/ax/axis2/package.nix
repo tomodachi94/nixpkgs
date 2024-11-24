@@ -38,6 +38,10 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     install -Dm644 dist/axis2.war -t $out/webapps
     unzip $out/webapps/axis2.war -d $out/webapps/axis2
 
+    # Symlink Ant task to location expected by ant.hook
+    mkdir -p "$out/share/ant/lib"
+    ln -s "$out/lib/axis2-ant-plugin-${finalAttrs.version}.jar" "$out/share/ant/lib"
+
     runHook postInstall
   '';
 
