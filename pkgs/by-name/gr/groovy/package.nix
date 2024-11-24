@@ -49,6 +49,7 @@ stdenv.mkDerivation rec {
 
     mkdir -p $out
     mkdir -p $out/share/doc/groovy
+    mkdir -p $out/share/ant/lib
 
     #Install icons
     mkdir -p $out/share/icons
@@ -62,6 +63,9 @@ stdenv.mkDerivation rec {
 
     mv {bin,conf,grooid,lib} $out
     mv {licenses,LICENSE,NOTICE} $out/share/doc/groovy
+
+    #Symlink groovy-ant to location expected by ant.hook
+    ln -s "$out/lib/groovy-ant-${version}.jar" "$out/share/ant/lib/groovy-ant-${version}.jar"
 
     sed -i 's#which#${which}/bin/which#g' $out/bin/startGroovy
 
