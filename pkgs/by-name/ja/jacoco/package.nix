@@ -27,6 +27,9 @@ stdenv.mkDerivation rec {
     cp -r doc $doc/share/doc/jacoco
     install -Dm444 lib/* -t $out/share/java
 
+    mkdir -p "$out/share/ant/lib"
+    ln -s "$out/share/java/org.jacoco.ant-*.jar" "$out/share/ant/lib"
+
     makeWrapper ${jre}/bin/java $out/bin/jacoco \
       --add-flags "-jar $out/share/java/jacococli.jar"
 
