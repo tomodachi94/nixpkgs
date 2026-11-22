@@ -6,6 +6,7 @@
   jdk8_headless,
   ant,
   saxon,
+  nix-update-script,
 }:
 let
   jdk_headless = jdk8_headless; # TODO: remove override https://github.com/NixOS/nixpkgs/pull/89731
@@ -53,6 +54,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
   checkPhase = "ant test";
+
+  passthru.updateScript = nix-update-script { };
 
   meta = {
     description = "RELAX NG validator in Java";
